@@ -14,4 +14,39 @@
         width: 8px;
         height: 8px;
     }
+
+    &-button-next , &-button-prev{
+        width: 30px;
+        height: 30px;
+        @include flex-mid;
+        border-radius: 100%;
+        background-color: $g-E5E5-cl;
+        transition: all .3s ease;
+        &::after{
+            font-size: 12px;
+            color: $b-cl;
+            font-weight: bold;
+            transition: all .3s ease;
+        }
+
+        &:hover{
+            background-color: $main-cl;
+            &::after{
+                color: $w-cl;
+            }
+        }
+    }
+
+    &-button-prev{
+        &::after{
+            margin-right: 2px;
+        }
+    }
+
+    &-button-next{
+        &::after{
+            margin-left: 2px;
+        }
+
+    }
 }

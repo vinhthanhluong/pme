@@ -9,11 +9,11 @@ export default function SlideModule() {
             const swiper = new Swiper(sliderContainer, {
                 speed: 1000,
                 loop: true,
-                spaceBetween: 0,
+                // spaceBetween: 0,
                 slidesPerView: 1,
-                // autoplay: {
-                //     delay: 4000,
-                // },
+                autoplay: {
+                    delay: 6000,
+                },
                 pagination: {
                     el: SliderPagination,
                     clickable: true,
@@ -108,9 +108,9 @@ export default function SlideModule() {
                 loop: loops,
                 allowTouchMove: notSlide,
 
-                autoplay: {
-                    delay: 4000,
-                },
+                // autoplay: {
+                //     delay: 4000,
+                // },
 
                 pagination: {
                     el: pagination,

@@ -2,4 +2,61 @@
     color: $main-cl;
 }
 
+.orange-cl {
+    color: $orange-cl;
+}
 
+.wrapper {
+    overflow: hidden;
+}
+
+
+.bx-online {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba($color: $b-cl, $alpha: .3);
+    transition: all .3s ease;
+    &:hover{
+        border-color: transparent;
+        box-shadow: 0 0px 20px rgba($color: $b-cl, $alpha: .16);
+        border-radius: 0 0 10px 10px;
+
+        .b-title{
+            color: $orange-cl;
+        }
+    }
+
+    .img {
+        display: block;
+    }
+
+    .content {
+        padding: 30px;
+    }
+
+    .b-title {
+        @include fz-16;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba($color: #C4C4C4, $alpha: .3);
+        display: block;
+        font-weight: bold;
+    }
+
+    .desc {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba($color: #C4C4C4, $alpha: .3);
+        line-height: 2;
+        font-size: 12px;
+    }
+
+    .b-more {
+        @include fz-16;
+        text-transform: uppercase;
+        font-weight: bold;
+        &:hover{
+            color: $orange-cl;
+        }
+    }
+}

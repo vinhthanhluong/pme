@@ -27,66 +27,27 @@
         color: initial;
     }
 
-    &:hover{
-        box-shadow: 10px 10px 20px rgba($color: $b-cl , $alpha: 0.16);
+    &.btn-now{
+        background-color: $orange-cl;
+        color: $w-cl;
+        border-radius: 10px;
+        width: auto;
+        height: auto;
+        padding: 8px 30px;
+        font-weight: normal;
+        @include fz-16;
+        line-height: 1.5;
+
+        &:hover{
+            background-color: $main-cl;
+        }
+
+        &:active{
+            transform: scale(.9);
+        }
     }
 
    
-}
-
-.box-light-dark {
-
-    .switch {
-        background: transparent;
-        border-radius: 20px;
-        cursor: pointer;
-        display: block;
-        height: 40px;
-        position: relative;
-        width: 80px;
-
-        .switch-toggle {
-            background: $dark-cl;
-            border-radius: 20px;
-            display: block;
-            height: 100%;
-            transition: background .3s;
-
-            &::after {
-                content: "";
-                display: block;
-                width: 34px;
-                height: 34px;
-                background: $light-cl;
-                border-radius: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                margin: 3px;   
-                transition: transform .3s, background .3s;
-            }
-        }
-
-        .switch-state {
-            opacity: 0;
-            pointer-events: none;
-            position: absolute;
-            outline: none;
-
-            &:focus~.switch-toggle {
-                box-shadow: 0 0 2px 3px rgba(0, 160, 204, 0.8);
-            }
-
-            &:checked~.switch-toggle {
-                background: $light-cl;
-
-                &::after {
-                    background: $dark-cl;
-                    transform: translate(calc(80px - 40px));
-                }
-            }
-        }
-    }
 }
 
 .hamburger-btn {
