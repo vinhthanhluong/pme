@@ -1,0 +1,26 @@
+.library{
+    .column{
+        &.txt{
+            width: calc(100% / 12 * 9);
+        }
+
+        &.side{
+            width: calc(100% / 12 * 3);
+        }
+    }
+
+    .col{
+        padding: 15px;
+        &s{
+            display: flex;
+            flex-wrap: wrap;
+            margin: -15px;
+        }
+    }
+
+    .lib-bx{
+        border-radius: 10px;
+    }
+
+    
+}

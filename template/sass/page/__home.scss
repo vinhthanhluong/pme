@@ -215,6 +215,10 @@
 }
 
 .student-say {
+    padding: 60px 0 30px;
+    &.--pt-0{
+        padding-top: 0;
+    }
     .title {
         line-height: 1.2;
     }
@@ -383,12 +387,67 @@
     }
 
     .q-item{
+        transition: all .6s ease;
         &:not(:first-child){
             margin-top: 30px;
+        }
+        &.active{
+            box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+            border-radius: 10px;
+
+            .q-title{
+                border-radius: 10px 10px 0 0 ;
+                border-color: $main-cl;
+                color: $w-cl;
+                background-color: $main-cl;
+                img{
+                    filter: brightness(0) invert(1);
+                    transform: rotate(90deg);
+                }
+            }
+
+            .q-content{
+            }
         }
     }
 
     .q-title{
         padding: 26px 30px;
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+        border: 1px solid rgba($color: $b-cl, $alpha: .3);
+        border-radius: 10px;
+        font-weight: bold;
+        @include fz-16;
+        transition: all .6s ease;
+        position: relative;
+        padding-right: 50px;
+        cursor: pointer;
+
+        img{
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            transition: all .3s ease;
+        }
+
+    }
+
+    .q-content{
+        padding: 30px 16px 30px 30px;
+        display: none;
+    }
+
+    .mona-content{
+        p{
+            &:first-child{
+                margin-top: 0;
+            }
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
     }
 }

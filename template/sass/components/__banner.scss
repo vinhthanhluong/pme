@@ -141,5 +141,14 @@
 		}
 	}
 
+    &.page-banners{
+        background-color: #D9E1E3;
+        color: #45546A;
+        padding: 95px 0 85px;
 
+        .title{
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+    }
 }

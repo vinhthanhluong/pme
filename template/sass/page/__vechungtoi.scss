@@ -1,0 +1,116 @@
+.about-us {
+    .column {
+        width: 50%;
+    }
+
+    .title {
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .mona-content {
+        line-height: 1.5;
+
+        p {
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .img {
+        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .ellipse-s{
+        bottom: 0;
+        right: 0;
+        transform: translate(50% , 30%);
+        z-index: -1;
+    }
+  
+}
+
+.teacher-team {
+    &:nth-child(odd) {
+        background-color: #F8F8F8;
+        .columns{
+            flex-direction: row-reverse;
+        }
+    }
+
+    .title {
+        margin-bottom: 15px;
+    }
+
+    .head {
+        margin-bottom: 30px;
+        max-width: 770px;
+        margin: 0 auto 30px;
+    }
+
+    .column {
+        &.ig {
+            width: calc(100% / 12 * 4);
+        }
+
+        &.txt {
+            width: calc(100% / 12 * 8);
+        }
+    }
+
+    .img {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+    }
+
+    .name {
+        margin-bottom: 15px;
+    }
+
+    .job {
+        margin-bottom: 15px;
+    }
+
+    .t-label {
+        margin-bottom: 15px;
+    }
+
+    .mona-content {
+        p {
+            line-height: 1.5;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        li {
+            &:not(:first-child) {
+                margin-top: 15px;
+            }
+
+            list-style-type: disc;
+            list-style-position: inside;
+            vertical-align: middle;
+
+            &::marker {
+                color: $main-cl;
+            }
+        }
+    }
+
+
+
+}

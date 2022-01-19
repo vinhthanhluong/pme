@@ -1,0 +1,71 @@
+.vision{
+    position: relative;
+
+    .bg-dots{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(-50% , -50%);
+
+        img{
+            animation: shake-vertical 12s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+        }
+    }
+
+    .column{
+        width: 50%;
+    }
+
+    .vision-box{
+        &:not(:first-child){
+            margin-top: 30px;
+        }
+    }
+
+    .img{
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+    }
+
+    .title{
+        margin-bottom: 15px;
+        line-height: 1.2;
+    }
+
+    .mona-content{
+        line-height: 1.5;
+
+        P{
+            &:first-child{
+                margin-top: 0;
+            }
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+        ul{
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        li{
+            &:not(:first-child){
+                margin-top: 15px;
+            }
+
+            list-style-type: disc;
+            list-style-position: outside;
+
+            &::marker{
+                color: $main-cl;
+            }
+        }
+
+        
+        
+    }
+    
+}

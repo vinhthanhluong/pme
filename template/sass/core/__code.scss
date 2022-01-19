@@ -14,15 +14,19 @@
 .bx-online {
     border-radius: 10px;
     overflow: hidden;
-    border: 1px solid rgba($color: $b-cl, $alpha: .3);
     transition: all .3s ease;
-    &:hover{
+
+    &:hover {
         border-color: transparent;
         box-shadow: 0 0px 20px rgba($color: $b-cl, $alpha: .16);
         border-radius: 0 0 10px 10px;
 
-        .b-title{
+        .b-title {
             color: $orange-cl;
+        }
+
+        .content{
+            border-color: $w-cl;
         }
     }
 
@@ -32,6 +36,11 @@
 
     .content {
         padding: 30px;
+        border: 1px solid rgba($color: $b-cl, $alpha: .3);
+        border-top: 0;
+        border-radius: 0 0 10px 10px;
+        transition: all .3s ease
+        
     }
 
     .b-title {
@@ -55,8 +64,106 @@
         @include fz-16;
         text-transform: uppercase;
         font-weight: bold;
+
+        &:hover {
+            color: $orange-cl;
+        }
+    }
+}
+
+
+.c-box{
+    // border-radius: 10px;
+    overflow: hidden;
+    transition: all .3s ease;
+    &:hover{
+        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+        border-radius: 0 0 10px 10px;
+        .c-img{
+            border-radius: 0;
+        }
+
+        .c-content{
+            border-color: transparent;
+        }
+
+        .c-tt{
+            color: $orange-cl;
+        }
+    }
+    .c-img{
+        display: block;
+        transition: all .3s ease;
+        border-radius: 10px 10px 0 0;
+        overflow: hidden;
+    }
+
+    .c-content{
+        padding: 30px;
+        border: 1px solid rgba($color: $b-cl, $alpha: .3);
+        transition: all .3s ease;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .c-tt{
+        transition: all .3s ease;
+        line-height: 1.2;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba($color: #C4C4C4, $alpha: .3);
+        display: block;
+    }
+
+    .c-list{
+        border-bottom: 1px solid rgba($color: #C4C4C4, $alpha: .3);
+        padding-bottom: 15px;
+    }
+
+    .c-item{
+        &:not(:first-child){
+            margin-top: 15px;
+        }
+    }
+
+    .c-span{
+        padding-left: 20px;
+        color: #C4C4C4;
+        text-decoration: line-through;
+    }
+
+    .c-more{
+        margin-top: 15px;
+        display: block;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: all .3s ease;
+
         &:hover{
             color: $orange-cl;
         }
+    }
+}
+
+.ellipse-s{
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    .e-bg{
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        background-color: $main-cl;
+
+        animation: shake-vertical 12s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+    }
+
+    .e-sm{
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background-color: $orange-cl;
+
+        animation: shake-vertical 16s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+        
     }
 }

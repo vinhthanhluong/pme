@@ -35,7 +35,10 @@
         justify-content: flex-end;
         padding: 10px 0 12px;
         gap: 30px ;
-
+        @include max-media($bk-576){
+            justify-content: space-between;
+            gap: 15px;
+        }
     }
 
     .logo {
@@ -46,6 +49,9 @@
     .header-social{
         display: flex;
         align-items: center;
+        @include max-media($bk-d-1200){
+            display: none;
+        }
         .s-list{
             display: flex;
             align-items: center;
@@ -58,9 +64,28 @@
 
     .header-phone{
         text-align: center;
+        @include max-media($bk-d-1200){
+            display: flex;
+            align-items: center;
+            text-align: left;
+        }
+
+        .p-title{
+            @include max-media($bk-d-1200){
+                padding-right: 5px;
+            }
+        }
     }
     .header-course{
         text-align: center;
+        @include max-media($bk-d-1200){
+            display: none;
+        }
+    }
+    .header-support{
+        @include max-media($bk-d-1200){
+            display: none;
+        }
     }
 }
 
@@ -89,30 +114,11 @@
 }
 
 .header-search {
-    //margin: 0 15px 0 48px;
-    //flex-grow: 1;
-
-    &-icon {
+    @include max-media($bk-d-1200){
         display: none;
-        width: 44px;
-        height: 44px;
-        line-height: 44px;
-        text-align: center;
-        background-color: $b-cl;
-        border-radius: 6px;
-        font-size: 16px;
-        color: $main-cl;
-
-        @include max-media($bk-768) {
-            display: block;
-        }
     }
 
-    @include max-media($bk-768) {
-        .search-form {
-            display: none;
-        }
-    }
+    
 
 }
 
@@ -135,11 +141,15 @@
         justify-content: center;
         color: $w-cl;
         border-radius: 100%;
-        margin: 0 10px;
+        margin: 0 5px;
         cursor: pointer;
 
         &.social-face {
             background-color: #3B5998;
+        }
+
+        &.social-twitter{
+            background-color: #41A1F2;
         }
 
         &.social-youtube {
@@ -147,8 +157,32 @@
         }
 
         &.social-insta {
-            background-color: $b-cl;
+            background-color: #2E78B6;
         }
+    }
+}
+
+.header-search-mobi{
+    position: relative;
+    margin: 0 10px 10px;
+    display: none;
+    @include max-media($bk-d-1200){
+        display: block;
+    }
+    .f-control{
+        height: 40px;
+        padding: 10px 50px 10px 15px;
+        &:hover , &:focus{
+            border-color: $main-cl;
+        }
+    }
+
+    .f-submit{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 }
 
@@ -414,30 +448,30 @@
         >a {
             @include min-media($bk-1200) {
                 text-align: center;
-                &::before {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 0;
-                    height: 1px;
-                    background-color: $main-cl;
-                    transition: all .3s ease;
-                }
+                // &::before {
+                //     content: "";
+                //     position: absolute;
+                //     bottom: 0;
+                //     left: 50%;
+                //     transform: translateX(-50%);
+                //     width: 0;
+                //     height: 1px;
+                //     background-color: $main-cl;
+                //     transition: all .3s ease;
+                // }
 
                 &:hover {
-                    color: $main-cl;
+                    color: $orange-cl;
 
-                    &::before {
-                        width: calc(100% - 24px);
-                    }
+                    // &::before {
+                    //     width: calc(100% - 24px);
+                    // }
                 }
             }
 
             &:focus {
                 @include max-media($bk-d-1200) {
-                    color: $main-cl;
+                    color:$orange-cl;
                 }
             }
         }
@@ -446,17 +480,17 @@
     // active live1
     .current-menu-item {
         >a {
-            color: $main-cl;
+            color: $orange-cl;
 
-            &::before {
-                width: calc(100% - 24px);
-            }
+            // &::before {
+            //     width: calc(100% - 24px);
+            // }
         }
 
         // active live 2
         .current-menu-item {
             >a {
-                background-color: $main-cl;
+                background-color: $orange-cl;
                 color: $w-cl;
             }
         }
@@ -493,7 +527,7 @@
     @include max-media($bk-d-1200){
         &:hover{
             > a{
-                color: $main-cl;
+                color:$orange-cl;
             }
         }
     }
@@ -501,7 +535,7 @@
     .dropdown {
         &:hover {
             >a {
-                background-color: $main-cl;
+                background-color: $orange-cl;
                 color: $w-cl;
             }
         }
@@ -578,7 +612,7 @@
         @include min-media($bk-1200) {
             &:hover {
                 color: $t-w-cl;
-                background-color: $main-cl;
+                background-color: $orange-cl;
             }
         }
     }
@@ -597,7 +631,7 @@
 
             &:hover {
                 color: $w-cl;
-                background-color: $main-cl;
+                background-color: $orange-cl;
             }
         }
 
