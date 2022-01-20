@@ -14,11 +14,23 @@
 
     .column{
         width: 50%;
+        @include max-media($bk-d-992){
+            width: 100%;
+        }
+
+        &s{
+            @include max-media($bk-d-992){
+                flex-direction: column-reverse;
+            }
+        }
     }
 
     .vision-box{
         &:not(:first-child){
             margin-top: 30px;
+            @include max-media($bk-d-992){
+                margin-top: 20px;
+            }
         }
     }
 
@@ -31,6 +43,9 @@
     .title{
         margin-bottom: 15px;
         line-height: 1.2;
+        @include max-media($bk-d-992){
+            margin-bottom: 7px;
+        }
     }
 
     .mona-content{
@@ -54,6 +69,9 @@
         li{
             &:not(:first-child){
                 margin-top: 15px;
+                @include max-media($bk-d-768){
+                    margin-top: 7px;
+                }
             }
 
             list-style-type: disc;

@@ -36,6 +36,15 @@
 		background-color: rgba($color: #D9E1E3, $alpha: .9);
 		position: relative;
 		z-index: 0;
+        @include max-media($bk-d-1440){
+            padding: 100px 0;
+        }
+        @include max-media($bk-d-1200){
+            padding: 80px 0;
+        }
+        @include max-media($bk-d-992){
+            padding: 60px 0;
+        }
 	}
 
 	.bg-slider{
@@ -62,6 +71,9 @@
         @include fz-36;
         line-height: 1.2;
         margin-bottom: 15px;
+        @include max-media($bk-d-992){
+            margin-bottom: 7px;
+        }
 
         span {
             display: block;
@@ -71,18 +83,33 @@
     .b-label {
         margin-bottom: 30px;
         @include fz-16;
+        @include max-media($bk-d-992){
+            margin-bottom: 20px;
+        }
     }
 
     .b-list {
         display: flex;
         flex-wrap: wrap;
         margin: -15px;
+        @include max-media($bk-d-992){
+            margin: -7.5px;
+        }
     }
 
     .b-item {
         padding: 15px;
         width: calc(100% /12 * 3);
         text-align: center;
+        @include max-media($bk-d-1200){
+            width: calc(100% /12 * 4);
+        }
+        @include max-media($bk-d-992){
+            padding: 7.5px;
+        }
+        @include max-media($bk-d-768){
+            width: 100%
+        }
 
         &:nth-child(1) {
             .b-box {
@@ -131,6 +158,10 @@
 		// margin-bottom: 15px;
 	}
 
+    .b-txt{
+        margin-bottom: 15px;
+    }
+
 	.b-more{
 		@include fz-16;
 		margin-top: auto;
@@ -145,7 +176,12 @@
         background-color: #D9E1E3;
         color: #45546A;
         padding: 95px 0 85px;
-
+        @include max-media($bk-d-1200){
+            padding: 70px 0 60px;
+        }
+        @include max-media($bk-d-768){
+            padding: 50px 0 40px;
+        }
         .title{
             line-height: 1.2;
             margin-bottom: 15px;

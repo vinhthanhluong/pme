@@ -23,6 +23,11 @@
 
             }
 
+            @include max-media($bk-576){
+                width: 36px;
+                height: 36px;
+            }
+
             &:hover {
                 background-color: $orange-cl;
                 color: $t-w-cl;
@@ -36,6 +41,11 @@
 			border-radius: 6px;
             @include flex-mid;
             transition: all .3 ease;
+			background-color: #F8F8F8;
+            @include max-media($bk-576){
+                width: 36px;
+                height: 36px;
+            }
 
             &:hover {
                 background-color: $orange-cl;
@@ -43,6 +53,17 @@
 					filter: brightness(0) invert(1);
 				}
             }
+
+            img{
+                @include max-media($bk-576){
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+        
+        .page-dots{
+            margin: 0 10px;
         }
     }
 }

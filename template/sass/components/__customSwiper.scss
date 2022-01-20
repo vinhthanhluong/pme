@@ -10,7 +10,7 @@
     }
 
     .swiper-pagination-bullet-active {
-        background-color: $main-cl;
+        background-color: $orange-cl;
         width: 8px;
         height: 8px;
     }
@@ -30,7 +30,7 @@
         }
 
         &:hover{
-            background-color: $main-cl;
+            background-color: $orange-cl;
             &::after{
                 color: $w-cl;
             }

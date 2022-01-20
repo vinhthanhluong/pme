@@ -3,10 +3,22 @@
     .column {
         &.sld {
             width: calc(100% /12 * 4);
+            @include max-media($bk-d-992){
+                width: calc(100% /12 * 5);
+            }
+            @include max-media($bk-d-768){
+                width: 100%;
+            }
         }
 
         &.txt {
             width: calc(100% /12 * 8);
+            @include  max-media($bk-d-992){
+                width: calc(100%/ 12 * 7);
+            }
+            @include max-media($bk-d-768){
+                width: 100%;
+            }
         }
     }
 
@@ -44,12 +56,22 @@
 
     .qlda-hd {
         padding-bottom: 60px;
+        @include max-media($bk-d-1200){
+            padding-bottom: 40px;
+        }
     }
 
     .swiper{
         border-radius: 10px;
         border: 1px solid rgba($color: $b-cl, $alpha: .3);
         padding: 44px 0;
+        @include max-media($bk-d-1200){
+            padding: 40px 0;
+        }
+        @include max-media($bk-576){
+            padding: 30px 0;
+        }
+      
         &:hover{
             .swiper-button-next , .swiper-button-prev{
                 @include visible;
@@ -85,6 +107,7 @@
             img {
                 margin: 0 auto;
             }
+            cursor: -webkit-zoom-in;
         }
     }
 
@@ -101,6 +124,9 @@
     .btn-now {
         @include fz-16;
         margin-top: 30px;
+        @include max-media($bk-d-768){
+            margin-top: 20px;
+        }
     }
 
     .q-desc{
@@ -135,6 +161,9 @@
         .mona-bx{
             &:not(:first-child){
                 margin-top: 30px;
+                @include max-media($bk-d-768){
+                    margin-top: 15px;
+                }
             }
 
             &.mona-check{
@@ -198,13 +227,19 @@
 
 .course-related{
     padding: 60px 0 30px;
+    @include max-media($bk-d-1200){
+        padding: 40px 0 10px;
+    }
     .title{
         line-height: 1.2;
     }
 
     .swiper{
         padding: 15px 0 30px;
-        margin: 0 -15px;
+        margin: 0 -15px;   
+        @include max-media($bk-d-992){
+            margin: 0 -7.5px;
+        }
 
         &-custom{
             position: relative;
@@ -213,16 +248,37 @@
         &-slide{
             width: calc(100% / 3);
             padding: 0 15px;
+            @include max-media($bk-d-992){
+                padding: 0 7.5px;
+            }
+            @include max-media($bk-d-768){
+                width: 50%;
+            }
+            @include max-media($bk-576){
+                width: 100%;
+            }
         }
 
         &-button-prev{
             left: -30px;
             transform: translateX(-100%);
+            @include max-media($bk-d-1440){
+                left: -10px;
+            }
+            @include max-media($bk-d-1200){
+                left: 15px;
+            }
         }
 
         &-button-next{
             right: -30px;
             transform: translateX(100%);
+            @include max-media($bk-d-1440){
+                right: -10px;
+            }
+            @include max-media($bk-d-1200){
+                right: 15px;
+            }
         }
     }
 

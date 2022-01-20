@@ -46,6 +46,9 @@
         &:active{
             transform: scale(.9);
         }
+        @include max-media($bk-d-992){
+            padding: 8px 20px;
+        }
     }
 
    

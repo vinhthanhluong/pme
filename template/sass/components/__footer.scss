@@ -1,65 +1,97 @@
 .footer {
     background-color: #E0E0E0;
     margin-top: auto;
-    color:#424C54;
+    color: #424C54;
 
     .logo {
         min-width: 190px;
         margin-bottom: 30px;
         display: block;
+        @include max-media($bk-d-1200){
+            margin-bottom: 15px;
+        }
     }
 
     .column {
         width: calc(100% /12 * 2);
+        @include max-media($bk-d-1200){
+            width: calc(100% / 12 * 2.5);
+        }
+        @include max-media($bk-d-768){
+            width: 50%;
+        }
 
         &.ft-ef {
             width: calc(100% / 12 * 3);
+
+            @include max-media($bk-d-1200) {
+                width: calc(100% / 12 * 4.5);
+            }
+            @include max-media($bk-d-768){
+                width: 50%;
+            }
+        }
+
+        &:nth-child(1) {
+            @include max-media($bk-768) {
+                width: 100%;
+            }
         }
     }
 
     .ft-itm {
         &:not(:first-child) {
             margin-top: 15px;
+            @include max-media($bk-d-1200){
+                margin-top: 7px;
+            }
         }
     }
 
     .ft-link {
         transition: all .3s ease;
+
         &:hover {
             color: $main-cl;
         }
 
-        &:nth-child(2){
+        &:nth-child(2) {
             display: block;
             padding-left: 64px;
+            @include max-media($bk-d-992){
+                padding-left: 56px;
+            }
         }
     }
 
-    .ft-title{
+    .ft-title {
         margin-bottom: 15px;
         line-height: 1.2;
     }
 
-    .ft-list{
-        .ft-itm{
+    .ft-list {
+        .ft-itm {
             display: block;
 
-            &.current-menu{
+            &.current-menu {
                 font-weight: bold;
             }
 
-            &:not(:first-child){
+            &:not(:first-child) {
                 margin-top: 15px;
+                @include max-media($bk-d-1200){
+                    margin-top: 10px;
+                }
             }
 
-            &:hover{
+            &:hover {
                 color: $main-cl;
             }
         }
     }
 
-    .fanpage{
-        iframe{
+    .fanpage {
+        iframe {
             border-radius: 10px;
         }
     }

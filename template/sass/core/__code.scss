@@ -10,6 +10,29 @@
     overflow: hidden;
 }
 
+.sec-63{
+    padding: 60px 0 30px;
+    @include max-media($bk-d-1200){
+        padding: 40px 0 10px;
+    }
+
+    &.--pt-0{
+        padding-top: 0;
+    }
+}
+
+.sec-30 {
+    padding: 30px 0;
+
+    &.--pt-0 {
+        padding-top: 0;
+    }
+
+    @include max-media($bk-d-1200){
+        padding: 10px 0;
+    }
+}
+
 
 .bx-online {
     border-radius: 10px;
@@ -39,7 +62,10 @@
         border: 1px solid rgba($color: $b-cl, $alpha: .3);
         border-top: 0;
         border-radius: 0 0 10px 10px;
-        transition: all .3s ease
+        transition: all .3s ease;
+        @include max-media($bk-d-992){
+            padding: 15px
+        }
         
     }
 
@@ -50,6 +76,10 @@
         border-bottom: 1px solid rgba($color: #C4C4C4, $alpha: .3);
         display: block;
         font-weight: bold;
+        @include max-media($bk-d-992){
+            margin-bottom: 7px;
+            padding-bottom: 7px;
+        }
     }
 
     .desc {
@@ -58,6 +88,10 @@
         border-bottom: 1px solid rgba($color: #C4C4C4, $alpha: .3);
         line-height: 2;
         font-size: 12px;
+        @include max-media($bk-d-992){
+            margin-bottom: 10px;
+            padding-bottom: 7px;
+        }
     }
 
     .b-more {
@@ -103,6 +137,10 @@
         border: 1px solid rgba($color: $b-cl, $alpha: .3);
         transition: all .3s ease;
         border-radius: 0 0 10px 10px;
+        background-color: $w-cl;
+        @include max-media($bk-d-992){
+            padding: 15px;
+        }
     }
 
     .c-tt{
@@ -112,16 +150,26 @@
         padding-bottom: 15px;
         border-bottom: 1px solid rgba($color: #C4C4C4, $alpha: .3);
         display: block;
+        @include max-media($bk-d-992){
+            padding-bottom: 7px;
+            margin-bottom: 7px;
+        }
     }
 
     .c-list{
         border-bottom: 1px solid rgba($color: #C4C4C4, $alpha: .3);
         padding-bottom: 15px;
+        @include max-media($bk-d-992){
+            padding-bottom: 7px;
+        }
     }
 
     .c-item{
         &:not(:first-child){
             margin-top: 15px;
+            @include max-media($bk-d-992){
+                margin-top: 7px;
+            }
         }
     }
 
@@ -137,7 +185,9 @@
         font-weight: bold;
         text-transform: uppercase;
         transition: all .3s ease;
-
+        @include max-media($bk-d-992){
+            margin-top: 7px;
+        }
         &:hover{
             color: $orange-cl;
         }
@@ -148,6 +198,10 @@
     display: flex;
     align-items: flex-end;
     position: absolute;
+    z-index: -1;
+    @include max-media($bk-d-1200){
+        display: none;
+    }
     .e-bg{
         width: 100px;
         height: 100px;
@@ -166,4 +220,85 @@
         animation: shake-vertical 16s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
         
     }
+}
+
+.bg-dots{
+    @include max-media($bk-d-1200){
+        display: none;
+    }
+}
+
+.lib-bx {
+    border-radius: 10px;
+    transition: all .3s ease;
+
+    &:hover {
+        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+
+        .l-title {
+            color: $orange-cl;
+        }
+
+        .l-content {
+            border-color: transparent;
+        }
+    }
+
+    .img {
+        border-radius: 10px 10px 0 0;
+        overflow: hidden;
+    }
+
+    .l-content {
+        padding: 30px;
+        border: 1px solid rgba($color: $b-cl, $alpha: .3);
+        border-top: none;
+        border-radius: 0 0 10px 10px;
+        transition: all .3s ease;
+        @include max-media($bk-d-1200){
+            padding: 15px;
+        }
+    }
+
+    .l-title {
+        transition: all .3s ease;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .date {
+        display: flex;
+        align-items: center;
+        font-style: italic;
+        margin-bottom: 15px;
+        @include max-media($bk-d-1200){
+            margin-bottom: 7px;
+        }
+
+        .l-icon {
+            margin-right: 5px;
+        }
+    }
+
+    .desc {
+        font-size: 12px;
+        line-height: 2;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba($color: #C4C4C4, $alpha: .3);
+        @include max-media($bk-d-1200){
+            // margin-bottom: 7px;
+            padding-bottom: 7px;
+        }
+    }
+
+    .link {
+        @include fz-16;
+        transition: all .3s ease;
+
+        &:hover {
+            color: $orange-cl;
+        }
+    }
+
 }

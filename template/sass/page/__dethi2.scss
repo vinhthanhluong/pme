@@ -21,8 +21,6 @@
         &.f-bold{
             margin-bottom: 15px;
         }
-           
-        
     }
 
     .title {
@@ -31,6 +29,12 @@
 
     .exam-tabs{
         padding-top: 60px;
+        @include max-media($bk-d-1200){
+            padding-top: 40px;
+        }
+        @include max-media($bk-576){
+            padding-top: 20px;
+        }
     }
 
     .exam-table {
@@ -68,6 +72,9 @@
                 text-transform: uppercase;
                 text-align: left;
                 padding: 17px 20px;
+                @include max-media($bk-576){
+                    padding: 15px 15px;
+                }
             }
         }
 
@@ -87,9 +94,15 @@
                 @include fz-16;
                 // padding: 15px 20px 0;
                 padding: 7.5px 20px;
+                @include max-media($bk-576){
+                    padding: 7.5px 10px;
+                }
 
                 &:nth-child(1) {
                     padding-left: 25px;
+                    @include max-media($bk-576){
+                        padding-left: 20px;
+                    }
                 }
             }
 
@@ -100,10 +113,16 @@
 
             &:nth-child(1) {
                 width: calc(100% / 12);
+                @include max-media($bk-d-992){
+                    width: calc(100% / 12 * 2);
+                }
             }
 
             &:nth-child(2) {
                 width: calc(100% /12 * 11);
+                @include max-media($bk-d-992){
+                    width: calc(100% / 12 * 10);
+                }
             }
         }
     }

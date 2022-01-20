@@ -1,17 +1,32 @@
 .difference{
     .column{
         width: 50%;
+        @include max-media($bk-d-992){
+            width: 100%;
+        }
     }
 
     &.dif-visi{
         .img{
             box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
         }
+
+        .columns{
+            @include max-media($bk-d-992){
+
+            }
+        }
     }
 
     .dif-box{
         &:nth-child(even){
             padding-top: 70px;
+            @include max-media($bk-d-1200){
+                padding-top: 40px;
+            }
+            @include max-media($bk-d-768){
+                padding-top: 20px;
+            }
             .columns{
                 flex-direction: row-reverse;
             }
@@ -48,6 +63,9 @@
         li{
             &:not(:first-child){
                 margin-top: 15px;
+                @include max-media($bk-d-992){
+                    margin-top: 7px;
+                }
             }
 
             list-style-type: disc;

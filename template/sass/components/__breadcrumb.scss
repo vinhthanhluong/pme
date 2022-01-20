@@ -6,10 +6,14 @@
         padding-bottom: 10px;
         color: $orange-cl;
 
+        overflow-x: scroll;
+        white-space: nowrap;
+        @include custom-horizontal-scrollbar(2px , $main-cl , transparent);
+
         @include max-media($bk-576) {
-            overflow-x: scroll;
-            white-space: nowrap;
-            @include custom-horizontal-scrollbar(2px);
+            // overflow-x: scroll;
+            // white-space: nowrap;
+            // @include custom-horizontal-scrollbar(2px);
         }
 
 

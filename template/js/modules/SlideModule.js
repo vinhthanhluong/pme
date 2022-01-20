@@ -97,11 +97,19 @@ export default function SlideModule() {
             var loops = true;
         }
 
+          //height
+          let s_Height = el.querySelector('.auto-height');
+          if (s_Height) {
+              var _h = true;
+          } else {
+              var _h = false;
+          }
+
         try {
             new Swiper(slider, {
                 speed: 1200,
                 slidesPerView: 'auto',
-                autoHeight: false,
+                autoHeight: _h,
                 observer: true,
                 observeParents: true,
                 observeSlideChildren: true,

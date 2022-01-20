@@ -1,6 +1,9 @@
 .home-lst {
     .column {
         width: 50%;
+        @include max-media($bk-d-768){
+            width: 100%;
+        }
     }
 
     .h-box {
@@ -12,6 +15,9 @@
 
         &:not(:first-child) {
             padding-top: 60px;
+            @include max-media($bk-d-1200){
+                padding-top: 40px;
+            }
         }
     }
 
@@ -21,6 +27,12 @@
         box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
         transition: all .3s ease;
         position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            object-fit: cover;
+        }
 
         &:hover {
             &::after {
@@ -54,22 +66,22 @@
     .title {
         line-height: 1.2;
         margin-bottom: 15px;
+        @include max-media($bk-d-992){
+            margin-bottom: 7px;
+        }
     }
 
     .desc {
         margin-bottom: 30px;
         line-height: 1.5;
+        @include max-media($bk-d-1200){
+            margin-bottom: 15px;
+        }
     }
 }
 
 .project-online {
-    &.sec-30 {
-        padding: 30px 0;
 
-        &.--pt-0 {
-            padding-top: 0;
-        }
-    }
 
     .swiper-custom {
         position: relative;
@@ -78,10 +90,25 @@
     .swiper {
         padding: 15px 0 30px;
         margin: 0 -15px;
+        @include max-media($bk-d-992){
+            margin: 0 -7.5px;
+        }
 
         &-slide {
             width: calc(100% / 4);
             padding: 0 15px;
+            @include max-media($bk-d-1200){
+                width: calc(100% / 3);
+            }
+            @include max-media($bk-d-992){
+                padding: 0 7.5px;
+            }
+            @include max-media($bk-d-768){
+                width: 50%;
+            }
+            @include max-media($bk-576){
+                width: 100%;
+            }
         }
 
         &-button-next,
@@ -98,11 +125,25 @@
         &-button-prev {
             left: -30px;
             transform: translate(-100%, 0);
+            @include max-media($bk-d-1440){
+                left: -10px;
+            }
+            @include max-media($bk-d-1200){
+                left: 15px;
+                // transform: none;
+            }
         }
 
         &-button-next {
             right: -30px;
             transform: translate(100%, 0);
+            @include max-media($bk-d-1440){
+                right: -10px;
+            }
+            @include max-media($bk-d-1200){
+                right: 15px;
+                // transform: none;
+            }
         }
     }
 
@@ -114,7 +155,12 @@
     color: $w-cl;
     padding: 85px 0;
     text-align: center;
-
+    @include max-media($bk-d-1200){
+        padding: 60px 0;
+    }
+    @include max-media($bk-d-992){
+        padding: 40px 0;
+    }
 
     .title {
         max-width: 900px;
@@ -126,25 +172,44 @@
         max-width: 950px;
         margin: 0 auto 30px;
         line-height: 1.5;
+        @include max-media($bk-d-768){
+            margin-bottom: 20px;
+        }
     }
 
 }
 
 .home-intros {
+    @include max-media($bk-d-992){
+        padding-bottom: 40px;
+    }
     .title {
         line-height: 1.2;
+        max-width: 900px;
+        margin: 0 auto;
     }
 
     .swiper {
         padding: 15px 0 30px;
         margin: 0 -15px;
+        @include max-media($bk-d-992){
+            margin: 0 -7.5px;
+        }
 
-        &-wrapper {}
+        &-custom {
+        }
 
         &-slide {
             width: calc(100% / 3);
             padding: 0 15px;
             color: $w-cl;
+            @include max-media($bk-d-992){
+                width: calc(100% / 2);
+                padding: 0 7.5px;
+            }
+            @include max-media($bk-d-768){
+                width: 100%;
+            }
 
             &:nth-child(1) {
                 .h-inner {
@@ -170,6 +235,9 @@
         padding: 30px;
         border-radius: 10px;
         box-shadow: 5px 0 15px rgba($color: $b-cl, $alpha: .25);
+        @include max-media($bk-d-1200){
+            padding: 20px;
+        }
     }
 
     .h-tt {
@@ -178,6 +246,11 @@
         margin-bottom: 15px;
         padding-bottom: 15px;
         border-bottom: 1px solid $w-cl;
+        br{
+            @include max-media($bk-d-1200){
+                display: none;
+            }
+        }
     }
 
     .h-item {
@@ -215,10 +288,10 @@
 }
 
 .student-say {
-    padding: 60px 0 30px;
-    &.--pt-0{
-        padding-top: 0;
-    }
+    // padding: 60px 0 30px;
+    // &.--pt-0{
+    //     padding-top: 0;
+    // }
     .title {
         line-height: 1.2;
     }
@@ -226,10 +299,19 @@
     .swiper {
         padding: 15px 0 30px;
         margin: 0 -15px;
-
+        @include max-media($bk-d-992){
+            margin:  0 -7.5px;
+        }
         &-slide {
             width: calc(100% / 3);
             padding: 0 15px;
+            @include max-media($bk-d-992){
+                width: calc(100% / 2);
+                padding: 0 7.5px;
+            }
+            @include max-media($bk-576){
+                width: 100%;
+            }
         }
 
         &-custom {
@@ -250,11 +332,23 @@
         &-button-next {
             right: -30px;
             transform: translate(100%, 0);
+            @include max-media($bk-d-1440){
+                right: -10px;
+            }
+            @include max-media($bk-d-1200){
+                right: 15px;
+            }
         }
 
         &-button-prev {
             left: -30px;
             transform: translate(-100%, 0);
+            @include max-media($bk-d-1440){
+                left: -10px;
+            }
+            @include max-media($bk-d-1200){
+                left: 15px;
+            }
         }
     }
 
@@ -269,6 +363,9 @@
         padding-left: 30px;
         z-index: 1;
         position: relative;
+        @include max-media($bk-d-768){
+            // padding-left: 15px;
+        }
     }
 
     .content {
@@ -277,6 +374,12 @@
         overflow: hidden;
         box-shadow: 0px 0px 15px rgba($color: $b-cl, $alpha: .25);
         padding: 86px 30px 30px;
+        @include max-media($bk-d-1200){
+            padding-top: 75px;
+        }
+        @include max-media($bk-d-768){
+            padding: 75px 15px 15px;
+        }
     }
 
     .name {
@@ -337,12 +440,19 @@
         position: absolute;
         bottom: 30px;
         right: 30px;
+        @include max-media($bk-d-768){
+            bottom: 15px;
+            right: 15px;
+        }
     }
 }
 
 .outstanding-activity {
     .column {
         width: calc(100% / 12 * 4);
+        @include max-media($bk-d-992){
+            width: 50%;
+        }
     }
     .title{
         margin-bottom: 15px;
@@ -384,12 +494,18 @@
 
     .column{
         width: 50%;
+        @include max-media($bk-d-768){
+            width: 100%;
+        }
     }
 
     .q-item{
         transition: all .6s ease;
         &:not(:first-child){
             margin-top: 30px;
+            @include max-media($bk-d-992){
+                margin-top: 15px;
+            }
         }
         &.active{
             box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
@@ -412,7 +528,8 @@
     }
 
     .q-title{
-        padding: 26px 30px;
+        padding: 26px 50px 26px 30px;
+        // padding-right: 50px;
         // display: flex;
         // justify-content: space-between;
         // align-items: center;
@@ -422,14 +539,21 @@
         @include fz-16;
         transition: all .6s ease;
         position: relative;
-        padding-right: 50px;
+        
         cursor: pointer;
+        @include max-media($bk-d-992){
+            padding: 20px 40px 20px 20px;
+        }
 
         img{
             position: absolute;
             top: 30px;
             right: 30px;
             transition: all .3s ease;
+            @include max-media($bk-d-992){
+                top: 22px;
+                right: 20px;
+            }
         }
 
     }
@@ -437,6 +561,9 @@
     .q-content{
         padding: 30px 16px 30px 30px;
         display: none;
+        @include max-media($bk-d-992){
+            padding: 20px 20px;
+        }
     }
 
     .mona-content{

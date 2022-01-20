@@ -11,4 +11,8 @@ export default function FileActiveModule() {
             $(this).next('.q-content').slideToggle();
         });
     }
+
+    if ($(window).width() <  768) {
+        $('.home-intros .swiper').addClass('auto-height');
+    }
 }
