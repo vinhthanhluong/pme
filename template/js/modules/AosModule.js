@@ -2,7 +2,7 @@ export default function AosModule() {
     AOS.init({
 		startEvent: 'DOMContentLoaded',
 		offset: 0,
-		duration: 600,
+		duration: 800,
 		delay: '200',
 		easing: 'ease-in-sine',
 		once: true,

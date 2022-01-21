@@ -58,6 +58,10 @@
         margin-top: 10px;
         @include max-media($bk-d-768){
             padding: 11px 15px;
+            margin-top: 5px;
+        }
+        &:hover , &:focus{
+            border-color: $main-cl;
         }
         &::placeholder{
             color: $b-cl;

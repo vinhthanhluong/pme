@@ -34,7 +34,7 @@ jQuery(document).ready(function ($) {
     AosModule();
     GridModule();   
     PopupModule();
-    FormModule
+    FormModule();
     LightGalleryModule();
     SlideModule();
     TabModule();

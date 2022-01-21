@@ -1,0 +1,66 @@
+.exam-listing {
+    .title {
+        margin-bottom: 15px;
+    }
+
+    .exam-tb {
+        width: 100%;
+        @include fz-16;
+
+        thead,
+        tbody,
+        tr,
+        td,
+        th {
+            display: block;
+        }
+
+        thead {
+            th {
+                width: 100%;
+                padding: 23px 10px;
+                background-color: $g-E5E5-cl;
+                border-radius: 10px 10px 0 0;
+                text-transform: uppercase;
+            }
+        }
+
+        tbody {
+            tr {
+                display: flex;
+
+            }
+
+            td {
+                padding: 24px 30px;
+                width: calc(100% / 3);
+                border: 1px solid rgba($color: $b-cl, $alpha: .3);
+                font-weight: 600;
+
+                &:nth-child(2) {
+                    text-align: center;
+                }
+            }
+
+            .t-head {
+                background-color: $g-E5E5-cl;
+                text-transform: uppercase;
+                text-align: center;
+
+                td {
+                    font-weight: bold;
+                }
+            }
+
+            
+        }
+    }
+
+    .f-control{
+        background-image: url('../img/svg/down.svg');
+        background-position: center right;
+        
+    }
+
+
+}

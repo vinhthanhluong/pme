@@ -33,24 +33,15 @@ export default function TabModule() {
 
     //class
     if ($('.c-tab')) {
-        $(".c-tab__nav ul li").click(function () {
+        $(".tab-title").click(function () {
             var tab_id = $(this).attr("data-tab");
 
-            $(".c-tab__nav ul li").removeClass("active");
-            $(".c-tab__content").removeClass("active");
+            $(".tab-title").removeClass("active");
+            $(".tab-cont").removeClass("active");
 
             $(this).addClass("active");
             $("." + tab_id).addClass("active");
         });
-        // $(".c-tab__tutorial ul li").click(function () {
-        //     var tab_id = $(this).attr("data-tab");
-
-        //     $(".c-tab__tutorial ul li").removeClass("active");
-        //     $(".c-tab__item").removeClass("active");
-
-        //     $(this).addClass("active");
-        //     $("." + tab_id).addClass("active");
-        // });
     }
 
 

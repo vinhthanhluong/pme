@@ -171,8 +171,8 @@
                 width: calc(100% / 12 * 7 + 30px);
 
                 @include min-media($bk-1200) {
-                    padding-left: calc((100vw - 1200px) / 2);
                     padding: 117px 0;
+                    padding-left: calc((100vw - 1200px) / 2);
                 }
 
                 @include max-media($bk-d-1200) {
