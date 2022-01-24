@@ -84,14 +84,17 @@
         justify-content: space-between;
         flex-wrap: wrap;
         margin-top: 15px;
-        @include max-media($bk-576){
-            
+        
+        .f-submit{
+            @include max-media($bk-576){
+                width: 100%;
+            }
         }
     }
     .remember{
-        @include max-media($bk-576){
-            width: 100%;
-        }
+        // @include max-media($bk-576){
+        //     width: 100%;
+        // }
     }
 
     .f-hidden{
@@ -142,9 +145,9 @@
         display: flex;
         align-items: center;
         @include max-media($bk-576){
-            width: 100%;
-            justify-content: center;
-            margin-top: 10px;
+            // width: 100%;
+            // justify-content: center;
+            // margin-top: 10px;
         }
         .f-submit{
             text-align: left;

@@ -265,6 +265,9 @@
 
     //acc course
     .acc-course {
+        @include max-media($bk-d-768){
+            padding-top: 0px;
+        }
         .acc-title {
             margin-bottom: 15px;
         }

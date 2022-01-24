@@ -1,6 +1,15 @@
 .exam-listing {
+    position: relative;
     .title {
         margin-bottom: 15px;
+    }
+
+
+    .exam-box{
+        @include max-media(600px){
+            max-width: 600px;
+            overflow: auto;
+        }
     }
 
     .exam-tb {
@@ -22,6 +31,9 @@
                 background-color: $g-E5E5-cl;
                 border-radius: 10px 10px 0 0;
                 text-transform: uppercase;
+                @include max-media($bk-d-992){
+                    padding: 18px 10px;
+                }
             }
         }
 
@@ -36,30 +48,66 @@
                 width: calc(100% / 3);
                 border: 1px solid rgba($color: $b-cl, $alpha: .3);
                 font-weight: 600;
-
-                &:nth-child(2) {
-                    text-align: center;
+                text-align: center;
+                @include max-media($bk-d-992){
+                    padding: 15px 20px;
+                }
+                &:nth-child(1) {
+                    text-align: left;
                 }
             }
 
             .t-head {
                 background-color: $g-E5E5-cl;
                 text-transform: uppercase;
-                text-align: center;
 
                 td {
                     font-weight: bold;
+                    text-align: center;
+                    &:nth-child(1){
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
                 }
             }
 
-            
+
         }
     }
 
-    .f-control{
+    .t-lab{
+        display: block;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        font-weight: bold;
+        @include max-media($bk-d-992){
+            margin-bottom: 7px;
+        }
+    }
+
+    .f-control {
         background-image: url('../img/svg/down.svg');
-        background-position: center right;
-        
+        background-position: right 15px center;
+        background-repeat: no-repeat;
+        padding: 6px 15px;
+        width: 209px;
+        max-width: 100%;
+        height: auto;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-radius: 0;
+        box-shadow: 10px 10px 40px rgba($color: $b-cl, $alpha: .25);
+        cursor: pointer;
+
+    }
+
+    .bg-dots{
+        position: absolute;
+        bottom: 50%;
+        right: 0;
+        transform: translate(50% , 50%);
     }
 
 

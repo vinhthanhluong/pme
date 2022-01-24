@@ -1,37 +1,118 @@
-.exam-three{
-    .title{
+.exam-three {
+    .title {
         margin-bottom: 15px;
     }
 
-    .exam-table{
-        border-radius: 10px 10px 0 0 ;
+    .exam-table {
+        border-radius: 10px 10px 0 0;
         overflow: hidden;
+        @include max-media($bk-d-768){
+            border-radius: 0;
+        }
     }
 
-    .exam-tb{
+    .exam-tb {
         width: 100%;
         @include fz-16;
 
-        thead{
-            background-color: $g-E5E5-cl;
-            th{
-                width: calc(100% / 6);
-                padding: 10px 15px;
+        thead,
+        tbody,
+        tr,
+        th,
+        td {
+            @include max-media($bk-d-768) {
+                display: block;
             }
         }
 
-        tbody{
-            tr{
-                border-bottom: 1px solid #C4C4C4;
+        thead {
+            background-color: $g-E5E5-cl;
+
+            th {
+                width: calc(100% / 6);
+                padding: 10px 15px;
+
+                @include max-media($bk-d-992) {
+                    padding: 10px 5px;
+                }
             }
-            td{
+
+            @include max-media($bk-d-768) {
+                display: none;
+            }
+        }
+
+        tbody {
+            tr {
+                border-bottom: 1px solid #C4C4C4;
+                @include max-media($bk-d-768){
+                    border: none;
+                    &:nth-child(even){
+                        background-color: rgba($color: gray, $alpha: .2);
+                    }
+                }
+            }
+
+            td {
                 padding: 23px 10px;
                 text-align: center;
                 font-weight: 600;
+
+                @include max-media($bk-d-768) {
+                    // width: 50%;
+                    padding: 15px 10px;
+                    padding-left: 50%;
+                    position: relative;
+                    border: 1px solid #C4C4C4;
+                }
+
+                &::before{
+                    position: absolute;
+                    top: 50%;
+                    left: 15px;
+                    transform: translateY(-50%);
+                    text-transform: uppercase;
+                    display: none;
+                    @include max-media($bk-d-768){
+                        display: block;
+                    }
+                }
+
+                &:nth-child(1) {
+                    &::before{
+                        content: 'DANH SÁCH BÀI TEST';
+                    }
+                }
+                &:nth-child(2) {
+                    &::before{
+                        content: 'SỐ CÂU HỎI';
+                    }
+                }
+                &:nth-child(3) {
+                    &::before{
+                        content: 'THỜI GIAN LÀM ( PHÚT )';
+                    }
+                }
+                &:nth-child(4) {
+                    &::before{
+                        content: '% YÊU CẦU ĐỂ PASS';
+                    }
+                }
+                &:nth-child(5) {
+                    &::before{
+                        content: 'NGÀY LÀM CUỐI CÙNG';
+                    }
+                }
+                &:nth-child(6) {
+                    &::before{
+                        content: 'KẾT QUẢ';
+                    }
+                }
+
             }
         }
 
-        .f-review{
+        .f-review {
             text-transform: uppercase;
             color: $w-cl;
             background-color: $orange-cl;
@@ -39,12 +120,13 @@
             border-radius: 10px;
             font-weight: normal;
             transition: all .3s ease;
-            &:hover{
+
+            &:hover {
                 background-color: $main-cl;
             }
         }
 
 
     }
-    
+
 }

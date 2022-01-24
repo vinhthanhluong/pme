@@ -13,6 +13,12 @@
                 width: 100%;
             }
         }
+
+        &s{
+            @include max-media($bk-d-768){
+                flex-direction: column-reverse;
+            }
+        }
     }
 
      //vd-catalog
@@ -27,6 +33,7 @@
         }
         @include max-media($bk-d-768){
             padding: 15px 15px;
+            margin: 40px 0 0;
         }
     }
 
@@ -123,7 +130,14 @@
             
         }
     }
+
+    .course-inner{
+        @include max-media($bk-d-768){
+            padding-top: 0;
+        }
+    }
 }
+
 
 .course-videos {
 
